@@ -10,13 +10,19 @@ const handle = {
 const RNSensors = {
   start: function (type, updateInterval) {
     const api = handle[type];
-    api.setUpdateInterval(updateInterval);
-    api.startUpdates();
+    if (api)
+    {
+      api.setUpdateInterval(updateInterval);
+      api.startUpdates();
+    }
   },
 
   stop: function (type) {
     const api = handle[type];
-    api.stopUpdates();
+    if (api)
+    {
+      api.stopUpdates();
+    }
   },
 };
 

@@ -32,7 +32,7 @@ public class Gyroscope extends ReactContextBaseJavaModule implements SensorEvent
 
     if (this.sensor == null) {
       // No sensor found, throw error
-      throw new RuntimeException("No Gyroscope found");
+      // throw new RuntimeException("No Gyroscope found");
     }
   }
 
